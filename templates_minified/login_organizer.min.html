@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang=es><head><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Inicio de Sesión Organizador</title><link rel=stylesheet href="{{ url_for('static', filename='css/style.min.css') }}"></head><body><div class=top-right-time><span id=current-time>{{ hora_actual }}</span></div><div class=login-container><div class=login-box><h2>Inicio de Sesión Organizador</h2><form action="{{ url_for('login_organizer_process') }}" method=POST><div class=input-group><label for=email>Email</label><input type=email id=email name=email placeholder=Value required></div><div class=input-group><label for=password>Password</label><input type=password id=password name=password placeholder=Value required></div><button type=submit class=btn-sign-in>Sign In</button></form><a href=# class=forgot-password>Forgot password?</a> {% if error %} <p class=error-message>{{ error }}</p> {% endif %} </div><div class=role-buttons><a href="{{ url_for('guest_mode') }}" class="btn-role guest-btn">Modo invitado</a><a href="{{ url_for('home') }}" class="btn-role user-btn">Usuario</a> </div></div><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Marca de agua" class="watermark"><script>
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script></body></html>

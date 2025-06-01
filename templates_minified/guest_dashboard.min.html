@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang=es><head><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Modo Invitado - Juegos</title><link rel=stylesheet href="{{ url_for('static', filename='css/style2.min.css') }}"></head><body><aside class=sidebar><div class=sidebar-header><a href="{{ url_for('home') }}" class=home-icon><img src="{{ url_for('static', filename='img/home_icon.png') }}" alt=Inicio></a></div><nav class=sidebar-nav><ul><li><a href=# class=sidebar-button onclick=redirectToLogin(event)><img src="{{ url_for('static', filename='img/icon_teams.png') }}" alt=Equipos><span>Equipos</span></a></li><li><a href=# class=sidebar-button onclick=redirectToLogin(event)><img src="{{ url_for('static', filename='img/icon_live.png') }}" alt=Live><span>Live</span></a></li><li><a href=# class=sidebar-button onclick=redirectToLogin(event)><img src="{{ url_for('static', filename='img/icon_roles.png') }}" alt=Roles><span>Roles</span></a></li><li><a href=# class=sidebar-button onclick=redirectToLogin(event)><img src="{{ url_for('static', filename='img/icon_settings.png') }}" alt=Settings><span>Settings</span></a></li></ul></nav><div class=sidebar-footer><a href=# class=sidebar-button onclick=redirectToLogin(event)><img src="{{ url_for('static', filename='img/icon_profile.png') }}" alt=Perfil></a></div></aside><main class=main-content><header class=main-header><div class=top-right-time><span id=current-time>{{ hora_actual }}</span></div><a href="{{ url_for('home') }}" class=btn-primary>Iniciar sesión</a><a href=# class=profile-icon><img src="{{ url_for('static', filename='img/icon_user_circle.png') }}" alt=Usuario></a></header><section class=content-section>
+<h1 class=section-title>Juegos de hoy</h1>
+<div class="logo-bg"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de agua"></div>
+<div class=carousel-container><div class=carousel-slide id=carousel-slide><img src="{{ url_for('static', filename='img/match1.jpg') }}" alt="Partido 1"><img src="{{ url_for('static', filename='img/match2.jpg') }}" alt="Partido 2"><img src="{{ url_for('static', filename='img/match3.jpg') }}" alt="Partido 3"><img src="{{ url_for('static', filename='img/match4.jpg') }}" alt="Partido 4"></div></div><div class=matches-table><table><thead><tr><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><div class=team-avatar></div></td><td>Equipo 1</td><td>20-21</td><td>Finalizado</td><td>04.may.2025<br>12:45 .pm</td></tr><tr><td><div class=team-avatar></div></td><td>Equipo 2</td><td>10 - 21</td><td>Finalizado</td><td>04.may.2025<br>12:45 .pm</td></tr><tr><td><div class=team-avatar></div></td><td>Equipo 3</td><td>8-2</td><td>En vivo</td><td>04.may.2025</td></tr><tr><td><div class=team-avatar></div></td><td>Equipo 4</td><td>1-0</td><td>En vivo</td><td>04.may.2025</td></tr><tr><td><div class=team-avatar></div></td><td>Equipo 5</td><td>0-0</td><td>próximamente</td><td>05.may.2025<br>12:00 .pm</td></tr><tr><td><div class=team-avatar></div></td><td>Equipo 6</td><td>0-0</td><td>próximamente</td><td>05.may.2025<br>12:00 .pm</td></tr></tbody></table></div></section></main>
+<script>
+        function updateTime() {
+            const timeElement = document.getElementById('current-time');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        function redirectToLogin(event) {
+            event.preventDefault();
+            alert("Para acceder a esta función, por favor inicie sesión.");
+            window.location.href = "{{ url_for('home') }}";
+        }
+
+        let slideIndex = 0;
+        const slides = document.getElementById('carousel-slide').children;
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+
+            setTimeout(showSlides, 10000);
+        }
+
+        document.addEventListener('DOMContentLoaded', showSlides);
+    </script></body></html>

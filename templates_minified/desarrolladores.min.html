@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang=es><head><meta charset=UTF-8><title>Desarrolladores</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+</head><body>
+{% if request.args.get('user_email') %}
+<h2>¡Saludos, {{ request.args.get('user_email') }}!</h2>
+{% endif %}
+<h1>Participantes</h1>
+<ul>
+<li>Iván Alexei Gamboa Bernal</li>
+<li>Alvarez Castro Logan Daniel</li>
+<li>samanta</li>
+<li>Pablo</li>
+<li>lisandro</li>
+<li>alejandro</li>
+</ul>
+<a href="{{ url_for('dashboard', user_email=request.args.get('user_email','invitado'), role=request.args.get('role','usuario')) }}">Volver al dashboard</a>
+</body></html>
