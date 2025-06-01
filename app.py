@@ -114,4 +114,5 @@ def desarrolladores():
     return render_template("desarrolladores.min.html")
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    # Cambia debug a False para producción
+    app.run(debug=False, port=8080, host="0.0.0.0")
