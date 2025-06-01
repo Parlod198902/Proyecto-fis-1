@@ -5,6 +5,15 @@ Proyecto completo para la gestión de torneos deportivos, desarrollado con **Pyt
 📅 **Fecha de creación:** Mayo 2025  
 👤 **Autor:** Iván Alexei Gamboa Bernal  
 📧 **Contacto:** gamboabernalivanalexei@gmail.com  
+👤 **CoAutor:** Alvarez Castro Logan Daniel
+📧 **Contacto:** ing.alvarezcastro619@gmail.com
+---
+👤 **Colaboradores:**
+Arias Hernández Pablo Armando
+Cruz López Alejandro
+Sánchez Soto Lizandro
+Daniela Samantha Orozco Urbano
+---
 🚀 **Desplegado en:** [Render.com](https://render.com)
 
 ---
