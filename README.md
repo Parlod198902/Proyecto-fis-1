@@ -9,10 +9,10 @@ Proyecto completo para la gestión de torneos deportivos, desarrollado con **Pyt
 📧 **Contacto:** ing.alvarezcastro619@gmail.com
 ---
 👤 **Colaboradores:**
-Arias Hernández Pablo Armando
-Cruz López Alejandro
-Sánchez Soto Lizandro
-Daniela Samantha Orozco Urbano
+- **Arias Hernández Pablo Armando
+- **Cruz López Alejandro
+- **Sánchez Soto Lizandro
+- **Daniela Samantha Orozco Urbano
 ---
 🚀 **Desplegado en:** [Render.com](https://render.com)
 
