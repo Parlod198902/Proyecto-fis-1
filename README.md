@@ -6,7 +6,7 @@ Proyecto completo para la gestión de torneos deportivos, desarrollado con **Pyt
 - 👤 **Autor:** Iván Alexei Gamboa Bernal  
 - 📧 **Contacto:** gamboabernalivanalexei@gmail.com  
 - 👤 **CoAutor:** Alvarez Castro Logan Daniel
- - **📧 **Contacto:** ing.alvarezcastro619@gmail.com
+ - 📧 **Contacto:** ing.alvarezcastro619@gmail.com
 ---
 👤 **Colaboradores:**
 - **Arias Hernández Pablo Armando
