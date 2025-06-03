@@ -1,6 +1,6 @@
 # 🏆 Sistema de Gestión de Torneos Deportivos
 
-Proyecto completo para la gestión de torneos deportivos, desarrollado con **Python + Flask** para el backend y **HTML/CSS + Jinja2** para el frontend.
+Proyecto completo para la gestión de torneos deportivos, desarrollado con **Python + Flask** para el backend (app.py) y **HTML/CSS + Jinja2** para el frontend.
 
 📅 **Fecha de creación:** Mayo 2025  
 - 👤 **Autor:** Iván Alexei Gamboa Bernal  
